@@ -15,7 +15,7 @@ create or replace file format my_csv_format
 // Step 2: create a stage which bascially maps in a location in the storage
     
 create or replace stage my_s3_stage url = 's3://mybucket.nuneskris/SNWFLK'
-credentials=(aws_key_id='AKIAYLI7Q37HGCUPN5ZW' aws_secret_key='+swdKa7tfvZx7ty+r+bMf3EBq7sRnZNeZ2KyWHmE')
+credentials=(aws_key_id='' aws_secret_key='')
 file_format = my_csv_format;
 
 // for testing I am dumping data into the the location
