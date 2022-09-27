@@ -59,7 +59,7 @@ select * from ext_hosts_data_q limit 10;
 CREATE  OR REPLACE  FILE FORMAT  my_json_format TYPE =  JSON ;
 
 create or replace stage my_s3_stage_json url = 's3://awsgluestudy-kris/examples/us-legislators/all'
-credentials=(aws_key_id='AKIAYLI7Q37HGCUPN5ZW' aws_secret_key='+swdKa7tfvZx7ty+r+bMf3EBq7sRnZNeZ2KyWHmE')
+credentials=(aws_key_id='' aws_secret_key='')
 file_format = my_json_format;
 
 select t.$1 from @my_s3_stage_json (file_format => 'my_json_format') t limit 100; //. we can have only one column for in json. 
