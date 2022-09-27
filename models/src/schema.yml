@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: src_reviews
+    description: raw view of the source table with minor column name changes. Note more information '{{ doc("doc_source_extaction_stage") }}'
+    columns:
+      - name: review_date
+        description: originally date in source table
+      - name: review_text
+        description: originally comments in source table
+      - name: review_sentiment
+        description: originally sentiment in source table
